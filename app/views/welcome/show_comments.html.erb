@@ -1,0 +1,17 @@
+<h1>话题评论</h1>
+<table>
+    <thead>
+        <tr>
+            <th>评论者</th>
+            <th>评论内容</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% (0..@comment_authors.length-1).each do |i| %>
+            <tr>
+                <td><%= @comment_authors[i].text %></td>
+                <td><%= @comment_contents[i].text %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>

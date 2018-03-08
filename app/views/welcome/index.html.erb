@@ -1,2 +1,8 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>欢迎来到点点橙</h1>
+<p>获取Ruby China社区内容</p>
+<p>请输入您想要获取Ruby China话题板块相应页的页码</p>
+<%=form_tag welcome_show_topics_path, method: :get do%>
+    <label>页码:</label>
+    <%= text_field_tag('page', nil, placeholder: "请填写想要获取的页码值", required: true) %>
+    <button type="submit">提交</button>
+<% end %>

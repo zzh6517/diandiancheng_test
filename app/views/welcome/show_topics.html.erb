@@ -1,0 +1,19 @@
+<h1>Ruby China话题</h1>
+<table>
+    <thead>
+        <tr>
+            <th>话题发起者</th>
+            <th>话题</th>
+            <th>操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% (0..@topics.length-1).each do |i| %>
+            <tr>
+                <td><%= @users[i].text %></td>
+                <td><%= @topics[i].text %></td>
+                <td><%= link_to "查看评论内容", welcome_show_comments_path(topic_id: @hrefs[i].attr("href").split('/').last.to_i) %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
