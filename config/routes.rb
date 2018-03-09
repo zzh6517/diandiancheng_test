@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get 'welcome/show_comments'
 
   resources :users
-  
+  resources :sessions, only: [:index, :new, :create]
 end
