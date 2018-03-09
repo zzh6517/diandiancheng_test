@@ -1,8 +1,11 @@
-<h1>欢迎来到点点橙</h1>
-<p>获取Ruby China社区内容</p>
+<h1>Ruby China</h1>
+<p>获取Ruby China社区话题</p>
 <p>请输入您想要获取Ruby China话题板块相应页的页码</p>
 <%=form_tag welcome_show_topics_path, method: :get do%>
     <label>页码:</label>
     <%= text_field_tag('page', nil, placeholder: "请填写想要获取的页码值", required: true) %>
     <button type="submit">提交</button>
 <% end %>
+
+<p><%= link_to "注册", new_user_path %></p>
+<p><%= link_to "登录", new_user_path %></p>
